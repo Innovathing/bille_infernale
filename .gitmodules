@@ -1,0 +1,3 @@
+[submodule "src/stm32_pilotes"]
+	path = src/stm32_pilotes
+	url = git@github.com:Innovathing/stm32_pilotes.git
