@@ -266,7 +266,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;C:\Keil\stm32lib\stm32f10x\peripherals\inc;.\src\applicatif;.\src\services_applicatives;..\pilotes\clock;.\src\pilotes</IncludePath>
+              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -643,7 +643,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;C:\Keil\stm32lib\stm32f10x\peripherals\inc;.\src\applicatif;.\src\services_applicatives;..\pilotes\clock;.\src\pilotes</IncludePath>
+              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>

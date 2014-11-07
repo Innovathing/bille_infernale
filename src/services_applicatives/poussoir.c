@@ -2,6 +2,8 @@
 #include "stm32f10x_gpio.h"
 #include "tir.h"
 #include "stm32f10x_exti.h"
+#include "stm32f10x_rcc.h"
+#include "misc.h"
 
 static int exti_state;
 

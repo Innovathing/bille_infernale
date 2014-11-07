@@ -1,6 +1,7 @@
 #include "tim.h"
 #include "stm32f10x_gpio.h"
 #include "clock.h"
+#include "stm32f10x_tim.h"
 
 
 void tim_config_struct(TIM_TimeBaseInitTypeDef* tim_config, float Duree_us, float tim_clk) {
