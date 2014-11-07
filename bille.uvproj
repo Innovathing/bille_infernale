@@ -266,7 +266,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes</IncludePath>
+              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes;.\src\stm32_pilotes\inc;.\src\stm32_pilotes\clock</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -303,41 +303,6 @@
               <FileName>tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src/pilotes/tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>clock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../pilotes/clock/clock.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_adc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>misc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/misc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_exti.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -398,6 +363,46 @@
               <FileName>galva.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src/services_applicatives/galva.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>stm32_pilotes</GroupName>
+          <Files>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/clock/clock.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -663,7 +668,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes</IncludePath>
+              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes;.\src\stm32_pilotes</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>
@@ -700,41 +705,6 @@
               <FileName>tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src/pilotes/tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>clock.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../pilotes/clock/clock.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_adc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>misc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/misc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_exti.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -795,6 +765,46 @@
               <FileName>galva.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src/services_applicatives/galva.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>stm32_pilotes</GroupName>
+          <Files>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/src/stm32f10x_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/stm32_pilotes/clock/clock.c</FilePath>
             </File>
           </Files>
         </Group>

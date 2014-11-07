@@ -1,5 +1,5 @@
 #include "galva.h"
-#include "stm32f10x_gpio.h"
+#include <stm32f10x_gpio.h>
 
 void galva_init()
 {
