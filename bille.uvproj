@@ -300,6 +300,16 @@
           <GroupName>pilotes</GroupName>
           <Files>
             <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/pilotes/tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../pilotes/clock/clock.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32f10x_adc.c</FileName>
               <FileType>1</FileType>
               <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_adc.c</FilePath>
@@ -340,14 +350,39 @@
               <FilePath>.\src/main.c</FilePath>
             </File>
             <File>
-              <FileName>galva.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src/services_applicatives/galva.c</FilePath>
-            </File>
-            <File>
               <FileName>tir.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src/applicatif/tir.c</FilePath>
+            </File>
+            <File>
+              <FileName>porte.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/applicatif/porte.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Boot</GroupName>
+          <Files>
+            <File>
+              <FileName>startup-gcc.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>C:/Keil/stm32lib/stm32f10x/boot/stm32f103/startup-gcc.S</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Service applicatifs</GroupName>
+          <Files>
+            <File>
+              <FileName>capteur.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/services_applicatives/capteur.c</FilePath>
+            </File>
+            <File>
+              <FileName>servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/services_applicatives/servo.c</FilePath>
             </File>
             <File>
               <FileName>propulseur.c</FileName>
@@ -360,24 +395,9 @@
               <FilePath>.\src/services_applicatives/poussoir.c</FilePath>
             </File>
             <File>
-              <FileName>clock.c</FileName>
+              <FileName>galva.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../pilotes/clock/clock.c</FilePath>
-            </File>
-            <File>
-              <FileName>tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src/pilotes/tim.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Boot</GroupName>
-          <Files>
-            <File>
-              <FileName>startup-gcc.S</FileName>
-              <FileType>2</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/boot/stm32f103/startup-gcc.S</FilePath>
+              <FilePath>.\src/services_applicatives/galva.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -677,6 +697,16 @@
           <GroupName>pilotes</GroupName>
           <Files>
             <File>
+              <FileName>tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/pilotes/tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../pilotes/clock/clock.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32f10x_adc.c</FileName>
               <FileType>1</FileType>
               <FilePath>C:/Keil/stm32lib/stm32f10x/peripherals/src/stm32f10x_adc.c</FilePath>
@@ -717,14 +747,39 @@
               <FilePath>.\src/main.c</FilePath>
             </File>
             <File>
-              <FileName>galva.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src/services_applicatives/galva.c</FilePath>
-            </File>
-            <File>
               <FileName>tir.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src/applicatif/tir.c</FilePath>
+            </File>
+            <File>
+              <FileName>porte.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/applicatif/porte.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Boot</GroupName>
+          <Files>
+            <File>
+              <FileName>startup-gcc.S</FileName>
+              <FileType>2</FileType>
+              <FilePath>C:/Keil/stm32lib/stm32f10x/boot/stm32f103/startup-gcc.S</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Service applicatifs</GroupName>
+          <Files>
+            <File>
+              <FileName>capteur.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/services_applicatives/capteur.c</FilePath>
+            </File>
+            <File>
+              <FileName>servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/services_applicatives/servo.c</FilePath>
             </File>
             <File>
               <FileName>propulseur.c</FileName>
@@ -737,24 +792,9 @@
               <FilePath>.\src/services_applicatives/poussoir.c</FilePath>
             </File>
             <File>
-              <FileName>clock.c</FileName>
+              <FileName>galva.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../pilotes/clock/clock.c</FilePath>
-            </File>
-            <File>
-              <FileName>tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src/pilotes/tim.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Boot</GroupName>
-          <Files>
-            <File>
-              <FileName>startup-gcc.S</FileName>
-              <FileType>2</FileType>
-              <FilePath>C:/Keil/stm32lib/stm32f10x/boot/stm32f103/startup-gcc.S</FilePath>
+              <FilePath>.\src/services_applicatives/galva.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,6 +1,7 @@
 #include "capteur.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_exti.h"
+#include "misc.h"
 void capteur_init(Capteur_TypeDef* cap){
 	GPIO_InitTypeDef gpio_init = {cap->pin, GPIO_Speed_10MHz, GPIO_Mode_IPD};
 	GPIO_Init(cap->gpio, &gpio_init);
