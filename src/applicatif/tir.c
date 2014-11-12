@@ -6,7 +6,6 @@
 
 void tir_init()
 {
-		tir_init_clocks();
     poussoir_init();
     propulseur_init();
     galva_init();
