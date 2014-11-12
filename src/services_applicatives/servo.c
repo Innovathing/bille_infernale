@@ -2,10 +2,14 @@
 
 
 
-void servo_init(Servo_TypeDef* servo){
+void servo_init(int num){
 	
 }
 
-void servo_fermer_porte(Servo_TypeDef* servo, int degree){
+void servo_init_private(GPIO_TypeDef* gpio, int pin) {
+	
+}
+
+void servo_fermer_porte(int num){
 	
 }
