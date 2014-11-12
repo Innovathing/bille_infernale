@@ -12,11 +12,6 @@ void tir_init()
     galva_init();
 }
 
-void tir_init_clocks()
-{
-	// TODO arbre horloge
-}
-
 void tir_perform_charge() {
 	propulseur_init_fire();
 }

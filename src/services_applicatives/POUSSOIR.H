@@ -1,6 +1,7 @@
 #ifndef POUSSOIR_H
 #define POUSSOIR_H
 
+#define AH_GPIOA
 /*
  * Bouton fire sur le GPIOA0 car il est sur EXTI0.
  */

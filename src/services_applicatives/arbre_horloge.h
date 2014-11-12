@@ -15,6 +15,13 @@
 #ifndef __ARBRE_HORLOGE_H
 #define __ARBRE_HORLOGE_H
 
+/** Service applicatifs utilisant les périphériques dont l'horloge a besoin d'être activé */
+#include "capteur.h"
+#include "galva.h"
+#include "poussoir.h"
+#include "propulseur.h"
+#include "servo.h"
+
 /**
 * \brief Active les horloges
 *
