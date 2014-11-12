@@ -364,6 +364,11 @@
               <FileType>1</FileType>
               <FilePath>.\src/services_applicatives/galva.c</FilePath>
             </File>
+            <File>
+              <FileName>arbre_horloge.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/services_applicatives/arbre_horloge.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -765,6 +770,11 @@
               <FileName>galva.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\src/services_applicatives/galva.c</FilePath>
+            </File>
+            <File>
+              <FileName>arbre_horloge.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src/services_applicatives/arbre_horloge.c</FilePath>
             </File>
           </Files>
         </Group>

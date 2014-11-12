@@ -9,11 +9,10 @@ static int exti_state;
 
 void poussoir_init()
 {
-	RCC_APB2PeriphClockCmd(GPIO_FIRE_RCC, ENABLE);
 	GPIO_InitTypeDef gpio_init = {PIN_FIRE, GPIO_Speed_10MHz, GPIO_Mode_IN_FLOATING};
 	GPIO_Init(GPIO_FIRE, &gpio_init);
 	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA,0);
-	
+
 	EXTI_InitTypeDef EXTI_InitStructure;
 	EXTI_StructInit(&EXTI_InitStructure);
 	EXTI_InitStructure.EXTI_Line = GPIO_EXTI;
@@ -92,5 +91,5 @@ void EXTI1_IRQHandler(void) {
 			unmask_EXTI();
 			EXTI_Set_Wait_Rising();
 		}
-    
+
 }

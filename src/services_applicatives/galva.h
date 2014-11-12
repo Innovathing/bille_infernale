@@ -3,7 +3,7 @@
 
 #include "stm32f10x.h"
 
-
+#define AH_GPIOA
 #define GPIO_GALVA GPIOA
 #define PIN_GALVA GPIO_Pin_8
 

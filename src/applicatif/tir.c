@@ -6,15 +6,9 @@
 
 void tir_init()
 {
-		tir_init_clocks();
     poussoir_init();
     propulseur_init();
     galva_init();
-}
-
-void tir_init_clocks()
-{
-	// TODO arbre horloge
 }
 
 void tir_perform_charge() {
