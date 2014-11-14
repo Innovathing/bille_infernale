@@ -3,14 +3,11 @@
 #include "stm32f10x_exti.h"
 #include "misc.h"
 
-void capteur_init(int capNum){
-	if(capNum==0) {
+void capteur_init(){
 		capteur_init_private(GPIO_CAPTEURS, PIN_CAPTEUR_0, EXTI_Line_CAPTEUR_0);
-	} else if(capNum==1) {
 		capteur_init_private(GPIO_CAPTEURS, PIN_CAPTEUR_1, EXTI_Line_CAPTEUR_1);
-	} else if(capNum==2) {
 		capteur_init_private(GPIO_CAPTEURS, PIN_CAPTEUR_2, EXTI_Line_CAPTEUR_2);
-	}
+
 }
 
 void capteur_init_private(GPIO_TypeDef* gpio, int pin, int extLine) {

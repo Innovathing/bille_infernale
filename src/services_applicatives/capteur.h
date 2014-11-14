@@ -15,7 +15,7 @@
 #define EXTI_Line_CAPTEUR_2 EXTI_Line3
 
 
-void capteur_it_init(uint32_t);
+void capteur_it_init();
 void capteur_init();
 void capteur_init_private(GPIO_TypeDef* gpio, int pin, int exti_line);
 
