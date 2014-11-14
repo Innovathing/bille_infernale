@@ -2,7 +2,7 @@
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_exti.h"
 #include "misc.h"
-
+#include "porte.h"
 void capteur_init(){
 		capteur_init_private(GPIO_CAPTEURS, PIN_CAPTEUR_0, EXTI_Line_CAPTEUR_0);
 		capteur_init_private(GPIO_CAPTEURS, PIN_CAPTEUR_1, EXTI_Line_CAPTEUR_1);
