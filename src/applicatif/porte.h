@@ -14,6 +14,6 @@
 void porte_init_gpio(GPIO_TypeDef* gpio);
 void porte_init();
 
-void porte_fermer(int capteurPin);
+void porte_passage_capteur(int capnum);
 
 #endif

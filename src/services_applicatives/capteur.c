@@ -2,7 +2,7 @@
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_exti.h"
 #include "misc.h"
-
+#include "porte.h"
 void capteur_init(){
 		capteur_init_private(GPIO_CAPTEURS, PIN_CAPTEUR_0, EXTI_Line_CAPTEUR_0);
 		capteur_init_private(GPIO_CAPTEURS, PIN_CAPTEUR_1, EXTI_Line_CAPTEUR_1);
@@ -34,4 +34,18 @@ void capteur_it_init(uint32_t extLine){
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
+}
+
+void EXTI0_IRQHandler(void) {
+	porte_passage_capteur(0);
+}
+
+void EXTI2_IRQHandler(void) {
+	porte_passage_capteur(1);
+
+}
+
+void EXTI3_IRQHandler(void) {
+	porte_passage_capteur(2);
+
 }

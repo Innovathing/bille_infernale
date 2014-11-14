@@ -80,5 +80,45 @@ void servo_init_private(GPIO_TypeDef* gpio, int pin) {
 }
 
 void servo_fermer_porte(int num){
+	switch(num) {
+		case 0:
+			SERVO1_TIM_OCInitStructure.TIM_Pulse = SERVO1_CLOSE_Val * TIM_TimeBaseStructure.TIM_Period;
+			TIM_OC1Init(PORTE_TIMER, &SERVO1_TIM_OCInitStructure);
+			TIM_OC1PreloadConfig(PORTE_TIMER, TIM_OCPreload_Enable);
+			break;
+		case 1:
+			SERVO2_TIM_OCInitStructure.TIM_Pulse = SERVO2_CLOSE_Val * TIM_TimeBaseStructure.TIM_Period;
+			TIM_OC2Init(PORTE_TIMER, &SERVO2_TIM_OCInitStructure);
+			TIM_OC2PreloadConfig(PORTE_TIMER, TIM_OCPreload_Enable);
+			break;
+		case 2:
+			SERVO3_TIM_OCInitStructure.TIM_Pulse = SERVO3_CLOSE_Val * TIM_TimeBaseStructure.TIM_Period;
+			TIM_OC3Init(PORTE_TIMER, &SERVO3_TIM_OCInitStructure);
+			TIM_OC3PreloadConfig(PORTE_TIMER, TIM_OCPreload_Enable);
+			break;
+		default:
+			break;
+	}
+}
 
+void servo_ouvrir_porte(int num){
+	switch(num) {
+		case 0:
+			SERVO1_TIM_OCInitStructure.TIM_Pulse = SERVO1_OPEN_Val * TIM_TimeBaseStructure.TIM_Period;
+			TIM_OC1Init(PORTE_TIMER, &SERVO1_TIM_OCInitStructure);
+			TIM_OC1PreloadConfig(PORTE_TIMER, TIM_OCPreload_Enable);
+			break;
+		case 1:
+			SERVO2_TIM_OCInitStructure.TIM_Pulse = SERVO2_OPEN_Val * TIM_TimeBaseStructure.TIM_Period;
+			TIM_OC2Init(PORTE_TIMER, &SERVO2_TIM_OCInitStructure);
+			TIM_OC2PreloadConfig(PORTE_TIMER, TIM_OCPreload_Enable);
+			break;
+		case 2:
+			SERVO3_TIM_OCInitStructure.TIM_Pulse = SERVO3_OPEN_Val * TIM_TimeBaseStructure.TIM_Period;
+			TIM_OC3Init(PORTE_TIMER, &SERVO3_TIM_OCInitStructure);
+			TIM_OC3PreloadConfig(PORTE_TIMER, TIM_OCPreload_Enable);
+			break;
+		default:
+			break;
+	}
 }

@@ -19,7 +19,6 @@ void servo_init_private(GPIO_TypeDef* gpio, int pin);
 
 void servo_fermer_porte(int num);
 void servo_ouvrir_porte(int num);
-
 void servo_init_general();
 
 #endif

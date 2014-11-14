@@ -14,3 +14,7 @@ void porte_init() {
 	
 
 }
+
+void porte_passage_capteur(int capnum) {
+	servo_fermer_porte(capnum);
+}
