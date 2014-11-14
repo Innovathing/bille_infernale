@@ -673,7 +673,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes;.\src\stm32_pilotes</IncludePath>
+              <IncludePath>.\src;.\src\applicatif;.\src\services_applicatives;.\src\pilotes;.\src\stm32_pilotes\inc;.\src\stm32_pilotes\clock</IncludePath>
             </VariousControls>
           </Carm>
           <Aarm>

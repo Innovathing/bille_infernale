@@ -27,32 +27,42 @@ void propulseur_init()
 	TIM_TimeBaseInit(PROPULSEUR_TIMER, &tim_config);
 	TIM_ITConfig(PROPULSEUR_TIMER, TIM_IT_Update, ENABLE);
 
+	ADC_InitTypeDef ADC_InitStructure;
+	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
+  ADC_InitStructure.ADC_ScanConvMode = DISABLE;
+  ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;
+  ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
+  ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
+  ADC_InitStructure.ADC_NbrOfChannel = 1;
+	ADC_Init(PROPULSEUR_ADC, &ADC_InitStructure);
+	ADC_RegularChannelConfig(PROPULSEUR_ADC, ADC_Channel_2, 1, ADC_SampleTime_7Cycles5);
+	ADC_Cmd(PROPULSEUR_ADC, ENABLE);
+	 /* Enable ADC1 reset calibration register */   
+  ADC_ResetCalibration(PROPULSEUR_ADC);
+  /* Check the end of ADC1 reset calibration register */
+  while(ADC_GetResetCalibrationStatus(PROPULSEUR_ADC));
+
+  /* Start ADC1 calibration */
+  ADC_StartCalibration(PROPULSEUR_ADC);
+  /* Check the end of ADC1 calibration */
+  while(ADC_GetCalibrationStatus(PROPULSEUR_ADC));
+
 	NVIC_InitTypeDef NVIC_InitStructure;
 	NVIC_InitStructure.NVIC_IRQChannel = TIM_NVIC_PROPULSEUR;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
-
 	TIM_Cmd(PROPULSEUR_TIMER, ENABLE);
-
-	ADC_InitTypeDef adc_init_struct;
-	ADC_StructInit(&adc_init_struct);
-	ADC_Init(PROPULSEUR_ADC, &adc_init_struct);
-	ADC_RegularChannelConfig(PROPULSEUR_ADC, ADC_Channel_2, 1, ADC_SampleTime_7Cycles5);
-	ADC_StartCalibration(PROPULSEUR_ADC);
-	while(ADC_GetCalibrationStatus(PROPULSEUR_ADC) != SET){};
-
 }
 
 
 void TIM3_IRQHandler()
 {
 	TIM_ClearFlag(PROPULSEUR_TIMER,TIM_FLAG_Update);
-	// ADC_SoftwareStartConvCmd(PROPULSEUR_ADC, ENABLE);
-	ADC_Cmd(PROPULSEUR_ADC, ENABLE);
+	ADC_SoftwareStartConvCmd(PROPULSEUR_ADC, ENABLE);
 	while(ADC_GetFlagStatus(PROPULSEUR_ADC, ADC_FLAG_EOC) != SET){}
-	tir_perform_mesure(0);
+	tir_perform_mesure(ADC_GetConversionValue(PROPULSEUR_ADC));
 }
 
 
