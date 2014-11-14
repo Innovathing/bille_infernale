@@ -35,3 +35,17 @@ void capteur_it_init(uint32_t extLine){
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 }
+
+void EXTI0_IRQHandler(void) {
+	porte_passage_capteur(0);
+}
+
+void EXTI2_IRQHandler(void) {
+	porte_passage_capteur(1);
+
+}
+
+void EXTI3_IRQHandler(void) {
+	porte_passage_capteur(2);
+
+}
