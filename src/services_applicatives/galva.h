@@ -3,9 +3,14 @@
 
 #include "stm32f10x.h"
 
-#define AH_GPIOA
-#define GPIO_GALVA GPIOA
-#define PIN_GALVA GPIO_Pin_8
+
+#define AH_GPIOB
+#define AH_AFIO
+#define AH_TIM2
+
+#define GPIO_GALVA GPIOB
+#define PIN_GALVA GPIO_Pin_10
+#define GALVA_TIMER TIM2
 
 void galva_init();
 

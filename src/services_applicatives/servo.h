@@ -1,7 +1,12 @@
 #ifndef SERVO_H
 #define SERVO_H
 #define AH_TIM4
+#define AH_GPIOB
+#define AH_AFIO
+
 #define PORTE_TIMER TIM4
+
+
 #define GPIO_PORTE GPIOB
 #define GPIO_PORTE_1 GPIO_Pin_6
 #define GPIO_PORTE_2 GPIO_Pin_7
