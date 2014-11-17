@@ -7,7 +7,6 @@
  */
 #define PIN_FIRE GPIO_Pin_1
 #define GPIO_FIRE GPIOA
-#define GPIO_FIRE_RCC RCC_APB2Periph_GPIOA
 #define GPIO_EXTI EXTI_Line1
 #define GPIO_NVIC_EXTI EXTI1_IRQn
 
