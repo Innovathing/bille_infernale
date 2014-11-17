@@ -56,15 +56,18 @@ void capteur_it_init(uint32_t extLine){
 }
 
 void EXTI0_IRQHandler(void) {
+	EXTI_ClearITPendingBit(EXTI_Line_CAPTEUR_0);
 	porte_passage_capteur(0);
 }
 
 void EXTI2_IRQHandler(void) {
+	EXTI_ClearITPendingBit(EXTI_Line_CAPTEUR_1);
 	porte_passage_capteur(1);
 
 }
 
 void EXTI3_IRQHandler(void) {
+	EXTI_ClearITPendingBit(EXTI_Line_CAPTEUR_2);
 	porte_passage_capteur(2);
 
 }
