@@ -11,7 +11,7 @@ void capteur_init(){
 }
 
 void capteur_init_private(GPIO_TypeDef* gpio, int pin, int extLine) {
-	GPIO_InitTypeDef gpio_init = {pin, GPIO_Speed_10MHz, GPIO_Mode_IPU};
+	GPIO_InitTypeDef gpio_init = {pin, GPIO_Speed_10MHz, GPIO_Mode_IN_FLOATING};
 	GPIO_Init(gpio, &gpio_init);
 	switch(pin){
 		case PIN_CAPTEUR_2:

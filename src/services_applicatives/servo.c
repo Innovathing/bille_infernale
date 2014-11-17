@@ -10,9 +10,9 @@ TIM_OCInitTypeDef  SERVO3_TIM_OCInitStructure;
 float SERVO1_OPEN_Val = 0.01;
 float SERVO2_OPEN_Val = 0.4;
 float SERVO3_OPEN_Val = 0.05;
-float SERVO1_CLOSE_Val = 0.20;
-float SERVO2_CLOSE_Val = 0.05;
-float SERVO3_CLOSE_Val = 0.20;
+float SERVO1_CLOSE_Val = 0.15;
+float SERVO2_CLOSE_Val = 0.07;
+float SERVO3_CLOSE_Val = 0.15;
 
 uint16_t PrescalerValue = 0;
 
