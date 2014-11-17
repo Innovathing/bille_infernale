@@ -11,9 +11,22 @@ void capteur_init(){
 }
 
 void capteur_init_private(GPIO_TypeDef* gpio, int pin, int extLine) {
-	GPIO_InitTypeDef gpio_init = {pin, GPIO_Speed_10MHz, GPIO_Mode_IPD};
+	GPIO_InitTypeDef gpio_init = {pin, GPIO_Speed_10MHz, GPIO_Mode_IPU};
 	GPIO_Init(gpio, &gpio_init);
-	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB,pin);
+	switch(pin){
+		case PIN_CAPTEUR_2:
+			pin = 3;
+			break;
+		case PIN_CAPTEUR_1:
+			pin = 2;
+			break;
+		case PIN_CAPTEUR_0:
+			pin = 0;
+			break;
+		default:
+			break;
+	}		
+	GPIO_EXTILineConfig(GPIO_PortSourceGPIOC,pin);
 	capteur_it_init(extLine);
 }
 void capteur_it_init(uint32_t extLine){
@@ -26,9 +39,15 @@ void capteur_it_init(uint32_t extLine){
 	EXTI_Init(&EXTI_InitStructure);
 	NVIC_InitTypeDef NVIC_InitStructure;
 	switch(extLine){
-		case EXTI_Line0: NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn;
-		case EXTI_Line2: NVIC_InitStructure.NVIC_IRQChannel = EXTI2_IRQn;
-		case EXTI_Line3: NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;
+		case EXTI_Line0: 
+			NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn;
+			break;
+		case EXTI_Line2: 
+			NVIC_InitStructure.NVIC_IRQChannel = EXTI2_IRQn;
+			break;
+		case EXTI_Line3: 
+			NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;
+			break;
 	}
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;

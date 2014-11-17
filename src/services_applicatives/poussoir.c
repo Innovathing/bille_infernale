@@ -11,8 +11,8 @@ void poussoir_init()
 {
 	GPIO_InitTypeDef gpio_init = {PIN_FIRE, GPIO_Speed_10MHz, GPIO_Mode_IN_FLOATING};
 	GPIO_Init(GPIO_FIRE, &gpio_init);
-	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA,0);
-
+	GPIO_EXTILineConfig(GPIO_PortSourceGPIOA,1);
+ 
 	EXTI_InitTypeDef EXTI_InitStructure;
 	EXTI_StructInit(&EXTI_InitStructure);
 	EXTI_InitStructure.EXTI_Line = GPIO_EXTI;
