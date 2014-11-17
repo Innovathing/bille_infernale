@@ -17,7 +17,7 @@ void galva_init()
 
 	TIM_OCInitTypeDef TIM_OCInitStructure;
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-  TIM_OCInitStructure.TIM_Pulse = 0x700;
+  TIM_OCInitStructure.TIM_Pulse = 0x0;
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
   TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
 
@@ -32,7 +32,7 @@ void galva_init()
 }
  
 void galva_do_afficher(uint16_t value) {
-		TIM_OCInitTypeDef TIM_OCInitStructure;
+	TIM_OCInitTypeDef TIM_OCInitStructure;
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCInitStructure.TIM_Pulse = value;
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
