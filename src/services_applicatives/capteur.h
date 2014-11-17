@@ -2,16 +2,17 @@
 #define CAPTEUR_H
 
 #include "stm32f10x.h"
+#define AH_GPIOC
 
-#define GPIO_CAPTEURS GPIOB
+#define GPIO_CAPTEURS GPIOC
 
-#define PIN_CAPTEUR_0 0
+#define PIN_CAPTEUR_0 GPIO_Pin_0
 #define EXTI_Line_CAPTEUR_0 EXTI_Line0
 
-#define PIN_CAPTEUR_1 2
+#define PIN_CAPTEUR_1 GPIO_Pin_2
 #define EXTI_Line_CAPTEUR_1 EXTI_Line2
 
-#define PIN_CAPTEUR_2 3
+#define PIN_CAPTEUR_2 GPIO_Pin_3
 #define EXTI_Line_CAPTEUR_2 EXTI_Line3
 
 
