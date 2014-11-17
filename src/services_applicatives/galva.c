@@ -12,7 +12,7 @@ void galva_init()
 
 	TIM_TimeBaseInitTypeDef tim_config;
 	TIM_TimeBaseStructInit(&tim_config);
-	tim_config_struct(&tim_config, 10000.0, (float) CLOCK_GetTIMCLK(GALVA_TIMER));
+	tim_config_struct(&tim_config, 10000, (float) CLOCK_GetTIMCLK(GALVA_TIMER));
 	TIM_TimeBaseInit(GALVA_TIMER, &tim_config);
 
 	TIM_OCInitTypeDef TIM_OCInitStructure;
@@ -34,7 +34,7 @@ void galva_init()
 void galva_do_afficher(uint16_t value) {
 	TIM_OCInitTypeDef TIM_OCInitStructure;
 	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-  TIM_OCInitStructure.TIM_Pulse = value;
+  TIM_OCInitStructure.TIM_Pulse = (value*0x7FFF)/0x0750;
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
   TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
 
