@@ -21,5 +21,6 @@
 void propulseur_init();
 void propulseur_init_fire();
 void propulseur_BOUM();
+void propulseur_decharge(int value);
 
 #endif

@@ -7,12 +7,12 @@ TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
 TIM_OCInitTypeDef  SERVO1_TIM_OCInitStructure;
 TIM_OCInitTypeDef  SERVO2_TIM_OCInitStructure;
 TIM_OCInitTypeDef  SERVO3_TIM_OCInitStructure;
-float SERVO1_OPEN_Val = 0.01;
-float SERVO2_OPEN_Val = 0.4;
-float SERVO3_OPEN_Val = 0.05;
-float SERVO1_CLOSE_Val = 0.15;
-float SERVO2_CLOSE_Val = 0.07;
-float SERVO3_CLOSE_Val = 0.15;
+float SERVO1_OPEN_Val = 0.0525;
+float SERVO2_OPEN_Val = 0.09;
+float SERVO3_OPEN_Val = 0.0535;
+float SERVO1_CLOSE_Val = 0.071;
+float SERVO2_CLOSE_Val = 0.0495;
+float SERVO3_CLOSE_Val = 0.0755;
 
 uint16_t PrescalerValue = 0;
 
@@ -32,7 +32,7 @@ void servo_init(){
 void servo_init_general(){
 	/* Time base configuration */
 	TIM_TimeBaseStructInit(&TIM_TimeBaseStructure);
-	tim_config_struct(&TIM_TimeBaseStructure, 10000 ,CLOCK_GetTIMCLK(TIM1) );
+	tim_config_struct(&TIM_TimeBaseStructure, 20000 ,CLOCK_GetTIMCLK(TIM1) );
   TIM_TimeBaseInit(PORTE_TIMER, &TIM_TimeBaseStructure);
 	
 	/* GPIO configuration */

@@ -85,3 +85,12 @@ void propulseur_BOUM()
 	// Charge � 0 : on lance la charge
 	GPIO_ResetBits(GPIO_DECHARGE, GPIO_DECHARGE_PIN);
 }
+
+void propulseur_decharge(int value)
+{
+	if(value)
+		GPIO_SetBits(GPIO_DECHARGE, GPIO_DECHARGE_PIN);
+	else
+		GPIO_ResetBits(GPIO_DECHARGE, GPIO_DECHARGE_PIN);
+		
+}
